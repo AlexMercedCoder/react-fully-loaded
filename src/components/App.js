@@ -5,6 +5,7 @@ import Footer from "./parts/Footer";
 import Home from "./pages/Home";
 import Other from "./pages/Other";
 import Another from "./pages/Another";
+import { useFetch } from "./customHooks";
 import {
   Button,
   Container,
@@ -19,6 +20,12 @@ export const GlobalContext = React.createContext(null);
 export const App = (props) => {
   //GLOBAL STATE PROVIDED BY GLOBAL CONTEXT
   const [Global, setGlobal] = React.useState({});
+
+  // custom hook, returns api data and function to set the URL
+  // to re-fetch
+  const [apiData, setURL] = useFetch(
+    "https://jsonplaceholder.typicode.com/todos/1"
+  );
 
   const slides = [
     {
