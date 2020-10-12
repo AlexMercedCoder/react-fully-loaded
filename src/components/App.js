@@ -25,19 +25,19 @@ export const App = (props) => {
       img:
         "https://i.guim.co.uk/img/media/d9acfe25335f2e82acc88f45d5397e77ff38be7e/0_486_3600_2159/master/3600.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=8cbeb7462cfd7adc2b86acb5eea061cb",
       alt: "first",
-      onClick: () => console.log("Hello World"),
+      click: () => console.log("Hello World"),
     },
     {
       img:
         "https://static.stacker.com/s3fs-public/styles/properly_sized_image/s3/2020-03/English%20Lab%20Puppy%20%281%29_0.png",
       alt: "second",
-      onClick: () => console.log("Hello World"),
+      click: () => console.log("Hello World"),
     },
     {
       img:
         "https://i.guim.co.uk/img/media/014bb12d1958d15765e172f92bcbfcc357f2f3a6/1053_1229_4191_2515/master/4191.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=013e33df2c23913fadf41e75fa9c854a",
       alt: "third",
-      onClick: () => console.log("Hello World"),
+      click: () => console.log("Hello World"),
     },
   ];
 
