@@ -17,7 +17,7 @@ export const useFetch = (url) => {
     };
 
     getData();
-  }, [url]);
+  }, [urlState]);
 
   return [data, setUrl];
 };
@@ -28,12 +28,11 @@ export const useFetch = (url) => {
 // Adjusts by the passed in interval
 //////////////////////////////
 export const useAdjuster = (initial, interval) => {
-  const [count, setCount] = React.useEffect(initial)
+  const [count, setCount] = React.useEffect(initial);
 
-  const inc = () => setCount(count + interval)
+  const inc = () => setCount(count + interval);
 
-  const dec = () => setCount(count - interval)
+  const dec = () => setCount(count - interval);
 
-  return [count, inc, dec]
-
+  return [count, inc, dec];
 };
