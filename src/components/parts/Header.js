@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useGlobal } from "../gstate";
 
 const Header = (props) => {
+  const { state, dispatch } = useGlobal();
+  console.log("GLOBAL STATE ASSETS:", state, dispatch);
   return (
     <>
       <h1>Header</h1>

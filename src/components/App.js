@@ -5,6 +5,7 @@ import Footer from "./parts/Footer";
 import Home from "./pages/Home";
 import Other from "./pages/Other";
 import Another from "./pages/Another";
+import { GlobalState } from "./gstate";
 import { useFetch } from "./customHooks";
 import {
   Button,
@@ -15,12 +16,7 @@ import {
   Carousel,
 } from "./utility";
 
-export const GlobalContext = React.createContext(null);
-
 export const App = (props) => {
-  //GLOBAL STATE PROVIDED BY GLOBAL CONTEXT
-  const [Global, setGlobal] = React.useState({});
-
   // custom hook, returns api data and function to set the URL
   // to re-fetch
   const [apiData, setURL] = useFetch(
@@ -49,7 +45,7 @@ export const App = (props) => {
   ];
 
   return (
-    <GlobalContext.Provider value={{ Global, setGlobal }}>
+    <GlobalState>
       <Container>
         <Header />
         <Carousel className="caro" slides={slides} />
@@ -95,6 +91,6 @@ export const App = (props) => {
         </Switch>
         <Footer />
       </Container>
-    </GlobalContext.Provider>
+    </GlobalState>
   );
 };

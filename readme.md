@@ -6,7 +6,7 @@ This react template uses webpack as a bundler and...
 
 - Has router configured
 - Pre-Made Header and Footer Components
-- GlobalContext for managing App level state (just import GlobalContext from App and the useContext hook to access the global state)
+- The global state assets are configured in gstate.js, import useGlobal hook to pull in the state and dispatch function in any component
 - Sass is configured, you can use the already existing styles.scss as your global stylesheet or do whatever you want
 - Several Utility Components available out of utility.js, feel free to customize them for your own use.
 - custom hooks (useFetch and useAdjuster) included in the customHooks file
