@@ -1,16 +1,12 @@
-import React, { useReducer } from "react";
+import React from "react";
+import {createDataStore} from "usedatastore"
 //////////////////////////////////////
-// The Global State
+// The Datastore
 //////////////////////////////////////
 
 const initialState = {
   hello: "world",
 };
-
-//////////////////////////////////////
-// globalContext
-//////////////////////////////////////
-const GlobalContext = React.createContext(null);
 
 //////////////////////////////////////
 // The Reducer
@@ -24,22 +20,4 @@ const reducer = (state, payload) => {
   }
 };
 
-//////////////////////////////////////
-// Global state component
-//////////////////////////////////////
-export const GlobalState = (props) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-  return (
-    <GlobalContext.Provider value={{ state, dispatch }}>
-      {props.children}
-    </GlobalContext.Provider>
-  );
-};
-
-//////////////////////////////////
-//useGlobal hook for getting data from global state
-//////////////////////////////////
-export const useGlobal = () => {
-  return React.useContext(GlobalContext);
-};
+export const [DataStore, useDataStore] = createDataStore(initialState,reducer)

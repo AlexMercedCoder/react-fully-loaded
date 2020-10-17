@@ -5,7 +5,7 @@ import Footer from "./parts/Footer";
 import Home from "./pages/Home";
 import Other from "./pages/Other";
 import Another from "./pages/Another";
-import { GlobalState } from "./gstate";
+import { DataStore as GlobalState } from "./gstate";
 import { useFetch } from "./customHooks";
 import {
   Button,
