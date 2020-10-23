@@ -11,10 +11,6 @@ This react template uses webpack as a bundler and...
 - Several Utility Components available out of utility.js, feel free to customize them for your own use.
 - custom hooks (useFetch and useAdjuster) included in the customHooks file
 
-Make sure to remove the git repository
-
-`sudo rm -r .git` from the root folder
-
 Otherwise...
 
 `npm run dev` to run dev server
