@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import Other from "./pages/Other";
 import Another from "./pages/Another";
 import { DataStore as GlobalState } from "./gstate";
-import { useFetch } from "./customHooks";
 import {
   Button,
   Container,
@@ -19,9 +18,6 @@ import {
 export const App = (props) => {
   // custom hook, returns api data and function to set the URL
   // to re-fetch
-  const [apiData, setURL] = useFetch(
-    "https://jsonplaceholder.typicode.com/todos/1"
-  );
 
   const slides = [
     {

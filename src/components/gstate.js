@@ -1,5 +1,5 @@
 import React from "react";
-import {createDataStore} from "usedatastore"
+import {createDataStore} from "merced-react-hooks"
 //////////////////////////////////////
 // The Datastore
 //////////////////////////////////////
