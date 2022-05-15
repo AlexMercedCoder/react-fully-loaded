@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from "./parts/Header";
 import Footer from "./parts/Footer";
 import Home from "./pages/Home";
@@ -80,11 +80,11 @@ export const App = (props) => {
             </Modal>
           </Card>
         </FlexContainer>
-        <Switch>
-          <Route exact path="/" render={(rp) => <Home {...rp} />} />
-          <Route exact path="/other" render={(rp) => <Other {...rp} />} />
-          <Route exact path="/another" render={(rp) => <Another {...rp} />} />
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<Home/>} />
+          <Route exact path="/other" element={<Other/>} />
+          <Route exact path="/another" element={<Another/>} />
+        </Routes>
         <Footer />
       </Container>
     </GlobalState>
